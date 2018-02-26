@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rtools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/c_f7f8f9">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/p1"
+        android:background="@color/c_e1e5ea" />
+  	<GridView
+        android:id="@+id/gv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        android:columnWidth="@dimen/p80"
+        android:orientation="horizontal"
+        android:listSelector="@android:color/transparent"
+        android:layout_marginTop="@dimen/p12"
+        android:layout_marginBottom="@dimen/p10"
+        android:verticalSpacing="@dimen/p8"
+        android:gravity="center"
+        />
+    
+</LinearLayout>

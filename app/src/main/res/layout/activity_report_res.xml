@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/keyboardLayout"
+    style="@style/GRootViewStyle"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="..."
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        style="@style/GRootViewStyle"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/GLinearLayoutStyle"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                style="@style/MStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/txt_12_333_center"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="李秀兰"
+                    android:textColor="@color/c_333333"/>
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    style="@style/txt_12_333_center"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="女"
+                    android:textColor="@color/c_333333"/>
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    style="@style/txt_12_333_center"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="26"
+                    android:textColor="@color/c_333333"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    style="@style/txt_12_333_center"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="电话：18002231771"
+                    android:textColor="@color/c_333333"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_high"
+                    style="@style/txt_12_333_center"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="身高:160cm"
+                    android:textColor="@color/c_333333"/>
+
+                <TextView
+                    android:id="@+id/tv_height"
+                    style="@style/txt_12_333_center"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="体重:49kg"
+                    android:textColor="@color/c_333333"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/txt_12_333_center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="甲功三项"
+                android:textColor="@color/c_333333"/>
+
+            <LinearLayout
+                style="@style/MStyle"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/p45"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_category1"
+                        style="@style/txt_12_333_center"
+                        android:layout_width="@dimen/p0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="项目"
+                        android:textColor="@color/c_333333"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_result"
+                        style="@style/txt_12_333_center"
+                        android:layout_width="@dimen/p0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="结果"
+                        android:textColor="@color/c_333333"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelCategory"
+                        style="@style/txt_12_333_center"
+                        android:layout_width="@dimen/p0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="参考范围"
+                        android:textColor="@color/c_333333"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+
+                <include layout="@layout/item_report_res"/>
+
+                <include layout="@layout/item_report_res"/>
+
+                <include layout="@layout/item_report_res"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/txt_12_333_center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="诊断建议"
+                android:textColor="@color/c_333333"/>
+
+            <RelativeLayout
+                style="@style/MStyle"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+
+                <android.support.v7.widget.AppCompatAutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/p5"
+                    android:layout_marginLeft="@dimen/p10"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/p5"
+                    android:background="@drawable/shape_corner_4_bg_white_storke_gray"
+                    android:gravity="start"
+                    android:minHeight="@dimen/p150"
+                    android:padding="5dp"
+                    android:text="【甲功三项】
+       TSH是指促甲状腺激素，是有垂体分泌的一种激素。这个偏高并不一定就是甲减，也可能是垂体性病变导致的。建议做一个甲状腺功能全面检查，确定下丘脑，垂体，甲状腺双向反馈是否有问题，从而科确定是否为甲减。
+       孕妇TSH高了，有可能会影响胎儿智力发育。
+       【耳聋基因】
+       未检出本检测范围所涉及的20个基因位点的突变。
+       野生型表示基因位点检测结果正常。"
+                    android:textColor="@color/c_474747"
+                    android:textColorHint="@color/c_CDCCCD"
+                    android:textSize="@dimen/sp_14"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                style="@style/MStyle"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    style="@style/txt_12_333_center"
+                    android:layout_width="@dimen/p0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_housemanager_blue"
+                    android:gravity="center"
+                    android:text="甲功三项"
+                    android:textColor="@color/c_333333"/>
+
+                <TextView
+                    style="@style/txt_12_333_center"
+                    android:layout_width="@dimen/p0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_housemanager_blue"
+                    android:gravity="center"
+                    android:text="耳聋基因"
+                    android:textColor="@color/c_333333"/>
+
+                <TextView
+                    style="@style/txt_12_333_center"
+                    android:layout_width="@dimen/p0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_housemanager_blue"
+                    android:gravity="center"
+                    android:text="脊肌萎缩"
+                    android:textColor="@color/c_333333"/>
+
+                <TextView
+                    style="@style/txt_12_333_center"
+                    android:layout_width="@dimen/p0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_housemanager_blue"
+                    android:gravity="center"
+                    android:text="地中海贫血"
+                    android:textColor="@color/c_333333"/>
+
+                <TextView
+                    style="@style/txt_12_333_center"
+                    android:layout_width="@dimen/p0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_housemanager_blue"
+                    android:gravity="center"
+                    android:text="颅面畸形"
+                    android:textColor="@color/c_333333"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+</LinearLayout>

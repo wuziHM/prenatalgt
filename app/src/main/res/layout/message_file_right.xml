@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rRead_left"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_f0f2f5" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/p65"
+        android:layout_height="fill_parent" 
+        android:layout_alignParentBottom="true">
+
+        <!-- 发送失败图标 -->
+
+        <ImageView
+            android:id="@+id/rightFileSendFailure"
+            android:layout_width="@dimen/p18"
+            android:layout_height="@dimen/p18"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/p10"
+            android:background="@drawable/msg_send_failure"
+            android:contentDescription="@string/no"
+            android:paddingBottom="@dimen/p10"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rightFileUnRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/rightFileSendFailure"
+            android:layout_marginLeft="@dimen/p5"
+            android:singleLine="true"
+            android:gravity="bottom|right"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/c_fdaa83"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rFileLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/p70"
+        android:background="@drawable/file_right_bg"
+        android:paddingBottom="@dimen/p10" >
+
+        <LinearLayout
+            android:id="@+id/rFileLayout_forwart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/p5"
+            android:layout_marginLeft="@dimen/p5"
+            android:gravity="center|center_vertical"
+            android:orientation="horizontal"
+             >
+
+            <TextView
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:paddingRight="@dimen/p10"
+                android:paddingTop="@dimen/p10"
+                android:paddingLeft="@dimen/p10"
+                android:singleLine="true"
+                android:textColor="@color/c_80000000"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                 />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rFileLayout_forwart" >
+
+            <ImageView
+                android:id="@+id/fileRightIcon"
+                android:layout_width="@dimen/p46"
+                android:layout_height="@dimen/p46"
+                android:layout_margin="@dimen/p10"
+                android:background="@mipmap/file_unknown"
+                android:contentDescription="@string/no" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/p10"
+                android:layout_marginLeft="@dimen/p10"
+                android:layout_toRightOf="@id/fileRightIcon" >
+
+                <TextView
+                    android:id="@+id/mFileTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="middle"
+                    android:maxEms="12"
+                    android:singleLine="true"
+                    android:text="@string/no"
+                    android:textColor="@color/c_e61d1d26"
+                    android:textSize="@dimen/sp_17" />
+
+                <TextView
+                    android:id="@+id/mSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/mStatus"
+                    android:singleLine="true"
+                    android:text="@string/rrillion"
+                    android:textColor="@color/c_80000000"
+                    android:textSize="@dimen/sp_15" />
+                <TextView
+                    android:id="@+id/mStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mFileTitle"
+                    android:layout_toRightOf="@id/mSize"
+                    android:layout_marginTop="@dimen/p5"
+                    android:layout_marginLeft="@dimen/p5"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/p5"
+                    android:textColor="@color/c_80000000"
+                    android:textSize="@dimen/sp_15" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/seekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p5"
+                android:layout_below="@id/fileRightIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/p10"
+                android:background="@color/white"
+                android:clickable="false"
+                android:indeterminateOnly="false"
+                android:paddingLeft="@dimen/p5"
+                android:paddingRight="@dimen/p15"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_style" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rightReceiverLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rFileLayout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/mreceiverFileContext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/p10"
+            android:background="@drawable/ic_withdraw_bg"
+            android:gravity="center|center_vertical"
+            android:singleLine="true"
+            android:text="@string/receiver_file"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_receipt_black_24dp"
+        android:title="@string/title_un_examine"/>
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_examined"/>
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_refer"/>
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@drawable/ic_perm_identity_black_24dp"
+        android:title="@string/title_me"/>
+
+</menu>

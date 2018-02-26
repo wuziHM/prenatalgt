@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- cj_msg_bg_list -->
+    <item android:drawable="@mipmap/message_detail_sel" android:state_focused="false" android:state_pressed="false"/>
+    <item android:drawable="@mipmap/message_detail_sel" android:state_focused="true" android:state_pressed="true"/>
+    <item android:drawable="@mipmap/message_detail_hover" android:state_focused="true" android:state_pressed="false"/>
+    <item android:drawable="@mipmap/message_detail_hover" android:state_focused="false" android:state_pressed="true"/>
+</selector>
+
+  	

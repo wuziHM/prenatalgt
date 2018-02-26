@@ -1,0 +1,76 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.yunkang.prenatalgt.ui.fragment.FragmentOne">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_lines_image"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/p10"
+            android:layout_marginRight="@dimen/p15"
+            android:layout_marginTop="@dimen/p15"
+            android:src="@mipmap/ic_more"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/p35"
+            android:layout_marginLeft="@dimen/p20"
+            android:layout_marginTop="@dimen/p5"
+            android:layout_toLeftOf="@id/iv_more"
+            android:drawablePadding="@dimen/p5"
+            android:background="@drawable/shape_corner_4_bg_white_storke_gray"
+            android:drawableLeft="@mipmap/ic_search"/>
+
+
+        <TextView
+            android:id="@+id/tv_com_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/et_search"
+            android:layout_below="@id/et_search"
+            android:layout_marginBottom="@dimen/p10"
+            android:layout_marginTop="@dimen/p60"
+            android:drawableLeft="@mipmap/ic_com_list"
+            android:drawablePadding="@dimen/p10"
+            android:text="待总检列表"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_com_list"
+            android:layout_marginLeft="@dimen/p8"
+            android:layout_toRightOf="@id/tv_com_list"
+            android:paddingBottom="@dimen/p2"
+            android:text="按时间排序"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_12"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/p10"
+        android:layout_marginRight="@dimen/p10"/>
+
+</LinearLayout>

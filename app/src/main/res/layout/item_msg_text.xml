@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_f0f2f5">
+
+    <TextView
+        android:id="@+id/sendtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginTop="@dimen/p4"
+        android:textColor="@color/c_9b9aa0"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"/>
+
+    <!-- 消息状态 -->
+
+    <RelativeLayout
+        android:id="@+id/rLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/p40"
+        android:layout_below="@id/sendtime"
+        android:layout_marginTop="@dimen/p10"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/p14"
+            android:background="@mipmap/checkbox_normal"/>
+    </RelativeLayout>
+
+    <!-- 左边 -->
+
+    <ViewStub
+        android:id="@+id/leftStub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendtime"
+        android:layout_gravity="left|center_horizontal"
+        android:layout_marginTop="@dimen/p15"
+        android:layout_toRightOf="@id/rLayout"
+        android:layout="@layout/leftlayout"
+        android:orientation="horizontal"/>
+
+    <!-- 右边 聊天 -->
+
+    <ViewStub
+        android:id="@+id/rightStub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendtime"
+        android:layout_gravity="left|center_horizontal"
+        android:layout_marginTop="@dimen/p15"
+        android:layout_toRightOf="@id/rLayout"
+        android:layout="@layout/rightlayout"
+        android:orientation="vertical"/>
+
+    <!-- 中间 显示消息撤回 -->
+
+    <LinearLayout
+        android:id="@+id/centerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendtime"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mWithdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/p10"
+            android:background="@drawable/ic_withdraw_bg"
+            android:ellipsize="middle"
+            android:gravity="center|center_vertical"
+            android:singleLine="true"
+            android:text="@string/message_withdrawal"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>

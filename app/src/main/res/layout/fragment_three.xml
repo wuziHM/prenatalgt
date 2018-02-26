@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:huanhuan="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeTop"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- 断网提示 -->
+
+        <RelativeLayout
+            android:id="@+id/rNoNet"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/p44"
+            android:background="#fff4d7"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ino_net_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/p15"
+                android:background="@mipmap/icon_no_net"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/p18"
+                android:layout_toRightOf="@id/ino_net_icon"
+                android:singleLine="true"
+                android:text="@string/no_connection_service"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/p15"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/p50"
+            android:layout_below="@id/rNoNet"
+            android:background="@color/c_F5F3F2"
+            android:paddingLeft="@dimen/p18"
+            android:paddingRight="@dimen/p18">
+
+            <View
+                android:id="@+id/etSearchBarSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/p35"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/ic_search_bg"
+                android:drawablePadding="@dimen/p5"
+                android:paddingLeft="@dimen/p10"
+                android:singleLine="true"
+                android:textColorHint="@color/c_80000000"
+                android:textSize="@dimen/sp_13"/>
+
+            <RelativeLayout
+                android:id="@+id/rSearchPic"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/p50"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/searchPic"
+                    android:layout_width="@dimen/p18"
+                    android:layout_height="@dimen/p18"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/p10"
+                    android:background="@mipmap/ic_search"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/tv_meetting_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/p5"
+                    android:layout_toRightOf="@id/searchPic"
+                    android:text="@string/hint_search"
+                    android:textColor="@color/c_80000000"
+                    android:textSize="@dimen/sp_15"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.yunkang.prenatalgt.widget.SearchListView
+            android:id="@+id/mListViewNews"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/search_rl"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:focusable="true"
+            android:listSelector="@android:color/transparent"
+            huanhuan:isHidden="true"/>
+
+        <!-- 无消息内容提示 -->
+
+        <LinearLayout
+            android:id="@+id/noContent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/search_rl"
+            android:background="@color/c_f5f5f5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/p250"
+                android:layout_height="@dimen/p200"
+                android:background="@mipmap/icon_no_content"
+                android:contentDescription="暂无消息"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:id="@+id/noMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/p13"
+                android:gravity="center|center_horizontal"
+                android:text="暂无消息"
+                android:textColor="@color/c_80000000"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

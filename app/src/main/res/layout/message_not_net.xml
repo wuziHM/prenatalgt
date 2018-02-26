@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rNoNet"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/p44"
+    android:background="#fff4d7"  
+    android:layout_marginTop="@dimen/p50">
+
+    <!-- 断网提示 -->
+
+    <ImageView
+        android:id="@+id/ino_net_icon"
+        android:layout_width="@dimen/p18"
+        android:layout_height="@dimen/p18"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/p15"
+        android:background="@mipmap/icon_no_net" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/p15"
+        android:layout_toRightOf="@id/ino_net_icon"
+        android:singleLine="true"
+        android:text="@string/no_connection_service"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/sp_15" />
+
+
+</RelativeLayout>

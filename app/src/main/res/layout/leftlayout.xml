@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|center_horizontal"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.yunkang.prenatalgt.widget.CircleImageView
+            android:id="@+id/left_userIcon"
+            android:layout_width="@dimen/p40"
+            android:layout_height="@dimen/p40"
+            android:layout_marginLeft="@dimen/p10"
+            android:gravity="center|center_vertical"
+            android:src="@mipmap/icon_c"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"/>
+
+        <ImageView
+            android:id="@+id/img_vaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/left_userIcon"
+            android:layout_alignRight="@id/left_userIcon"
+            android:background="@mipmap/deletem_v"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/left_sendName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/p25"
+            android:gravity="left"
+            android:lineSpacingExtra="1dp"
+            android:singleLine="true"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/left_sendName"
+            android:layout_marginLeft="@dimen/p10"
+            android:layout_marginRight="@dimen/p30"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9">
+
+                <RelativeLayout
+                    android:id="@+id/rlLeftContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/msg_bg_consultmsg">
+
+                    <TextView
+                        android:id="@+id/leftForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/p20"
+                        android:paddingRight="@dimen/p5"
+                        android:paddingTop="@dimen/p10"
+                        android:textColor="@color/c_80000000"
+                        android:textSize="@dimen/sp_12"
+                        android:visibility="gone"/>
+
+                    <com.yunkang.prenatalgt.widget.MyLinkTextView
+                        android:id="@+id/left_tv_chatcontent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/leftForward"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/JoinCallIcon"
+                        android:autoLink="all"
+                        android:gravity="left|center_vertical"
+                        android:lineSpacingExtra="1dp"
+                        android:paddingBottom="@dimen/p10"
+                        android:paddingLeft="@dimen/p25"
+                        android:paddingTop="@dimen/p10"
+                        android:text="@string/no"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/sp_16"/>
+
+                    <ImageView
+                        android:id="@+id/lAppointCallIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/p10"
+                        android:layout_marginLeft="@dimen/p20"
+                        android:layout_marginRight="@dimen/p10"
+                        android:layout_marginTop="@dimen/p10"
+                        android:src="@mipmap/icon_order"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/JoinCallIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/p10"
+                        android:layout_marginLeft="@dimen/p20"
+                        android:layout_marginTop="@dimen/p10"
+                        android:src="@mipmap/icon_call"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/TextJoinCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/leftForward"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/JoinCallIcon"
+                        android:gravity="left|center_vertical"
+                        android:lineSpacingExtra="1dp"
+                        android:paddingBottom="@dimen/p10"
+                        android:paddingLeft="@dimen/p5"
+                        android:paddingRight="@dimen/p17"
+                        android:paddingTop="@dimen/p10"
+                        android:text="@string/Join_Call"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/sp_16"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/lPicStyle"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@id/left_tv_chatcontent"
+                        android:src="@mipmap/encroption"/>
+
+                    <LinearLayout
+                        android:id="@+id/left_ly_apponitcontent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/p5"
+                        android:layout_marginRight="@dimen/p10"
+                        android:layout_marginTop="@dimen/p5"
+                        android:layout_toRightOf="@+id/lAppointCallIcon"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/left_tv_apponitcontent_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/sp_16"/>
+
+                        <TextView
+                            android:id="@+id/left_tv_apponitcontent_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <TextView
+                            android:id="@+id/left_tv_apponitcontent_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxWidth="@dimen/p115"
+                            android:singleLine="true"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/sp_14"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/left_message_receipt"
+                android:layout_width="@dimen/p35"
+                android:layout_height="@dimen/p35"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/p10"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:textColor="@color/c_fdaa83"
+                android:textSize="@dimen/sp_12"/>
+        </LinearLayout>
+
+        <com.yunkang.prenatalgt.widget.VMessageLeftLyView
+            android:id="@+id/vMessageLeftLyView_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/left_sendName"
+            android:layout_marginLeft="@dimen/p5"
+            android:visibility="gone"/>
+
+        <com.yunkang.prenatalgt.widget.VMessageLeftStaticImage
+            android:id="@+id/left_static_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/left_sendName"
+            android:layout_marginLeft="@dimen/p10"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textview_down_time"
+            android:layout_width="@dimen/p35"
+            android:layout_height="@dimen/p35"
+            android:layout_alignBottom="@+id/left_static_img"
+            android:layout_marginLeft="@dimen/p10"
+            android:layout_toRightOf="@+id/left_static_img"
+            android:textColor="@color/c_fdaa83"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"/>
+
+        <com.yunkang.prenatalgt.widget.VMessageLeftFileView
+            android:id="@+id/rLeftFileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/left_sendName"
+            android:layout_marginLeft="@dimen/p10"
+            android:background="@color/c_f0f2f5"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

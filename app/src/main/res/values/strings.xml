@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">孕前质检</string>
+    <string name="title_un_examine">待检列表</string>
+    <string name="title_examined">已检列表</string>
+    <string name="title_refer">咨询</string>
+    <string name="title_me">我</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_report">ReportActivity</string>
+
+
+    <string name="receiver_file">对方已成功接收文件</string>
+    <string name="call_photo_tips">可能是一个电话号码,你可以 </string>
+    <string name="send_message">发短信</string>
+    <string name="msg_msg_fireing">此消息已焚毁</string>
+    <string name="press_record">按住  说话</string>
+    <string name="onclick_lock">有人&#064;你,快点击查看</string>
+    <string name="rrillion">0</string>
+    <string name="lastUpdate">上次更新</string>
+    <string name="pull_to_refresh_release">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing">正在刷新,请稍等\u2026</string>
+    <string name="load_more">加载更多</string>
+    <string name="hint_search">搜索</string>
+    <string name="message_withdrawal">你撤回了一条消息</string>
+    <string name="cancel">取消</string>
+    <string name="copy">复 制</string>
+    <string name="del">删除</string>
+    <string name="forwarding">转 发</string>
+    <string name="send_phone">呼叫</string>
+    <string name="no">无</string>
+    <string name="loading">正在加载数据</string>
+    <string name="seen_more">更多</string>
+    <string name="no_connection_service">网络已断开</string>
+    <string name="send">发送</string>
+    <string name="Join_Call">发起了通话</string>
+    <string name="pull_to_refresh_pull_label" translatable="false">向下拉动可以刷新</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">邮箱</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_sign_in_short">快速登录</string>
+    <string name="error_invalid_email">错误的邮箱</string>
+    <string name="error_invalid_password">密码要大于4位</string>
+    <string name="error_incorrect_password">密码不正确</string>
+    <string name="error_field_required">请求失败</string>
+    <string name="permission_rationale">暂无权限
+    </string>
+    <!--over-->
+
+</resources>

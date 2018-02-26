@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rightLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="vertical" >
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:orientation="horizontal" >
+
+        <!-- 右边需要用线性布局并且需要权重 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/p10"
+            android:layout_weight="9"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/right_sendName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/p20"
+                android:gravity="right"
+                android:lineSpacingExtra="1dp"
+                android:maxEms="12"
+                android:maxLength="12"
+                android:singleLine="true"
+                android:text="@string/no"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <!-- 套起阅后即焚60S -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/p30"
+                    android:orientation="horizontal" >
+
+                    <!-- 回执显示 -->
+
+                    <TextView
+                        android:id="@+id/right_message_receipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginRight="@dimen/p5"
+                        android:gravity="bottom|right"
+                        android:singleLine="true"
+                        android:textColor="@color/c_fdaa83"
+                        android:textSize="@dimen/sp_12" />
+
+                    <!-- 发送失败图标 -->
+
+                    <ImageView
+                        android:id="@+id/right_send_failure"
+                        android:layout_width="@dimen/p18"
+                        android:layout_height="@dimen/p18"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/p10"
+                        android:layout_marginRight="@dimen/p10"
+                        android:background="@drawable/msg_send_failure"
+                        android:contentDescription="@string/no"
+                        android:visibility="gone" />
+
+                    <!-- 正在发送状态 -->
+
+                    <ProgressBar
+                        android:id="@+id/right_text_load"
+                        android:layout_width="@dimen/p17"
+                        android:layout_height="@dimen/p17"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/p10"
+                        android:layout_marginRight="@dimen/p10"
+                        android:indeterminateDrawable="@drawable/message_progress_send_state"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rsendFailure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/msg_bg_mymsg"
+                        android:gravity="right|center_vertical" >
+
+                        <TextView
+                            android:id="@+id/rightForward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/p25"
+                            android:paddingRight="@dimen/p15"
+                            android:paddingTop="@dimen/p15"
+                            android:textColor="@color/c_80000000"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <com.yunkang.prenatalgt.widget.MyLinkTextView
+                            android:id="@+id/right_tv_chatcontent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rightForward"
+                            android:autoLink="all"
+                            android:lineSpacingExtra="1dp"
+                            android:paddingLeft="@dimen/p25"
+                            android:paddingRight="@dimen/p15"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16" />
+
+                        <ImageView
+                            android:id="@+id/rVideoIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/p8"
+                            android:contentDescription="@string/no"
+                            android:src="@mipmap/icon_call"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/rAppointCallIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/p10"
+                            android:contentDescription="@string/no"
+                            android:src="@mipmap/icon_order"
+                            android:visibility="gone" />
+                        <!-- 右下角图片锁 -->
+
+                        <ImageView
+                            android:id="@+id/rPicStyle"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@mipmap/encroption"
+                            android:contentDescription="@string/no" />
+
+                        <LinearLayout
+                            android:id="@+id/right_ly_apponitcontent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/p5"
+                            android:layout_marginBottom="@dimen/p5"
+                            android:layout_marginRight="@dimen/p10"
+                            android:layout_toRightOf="@+id/rAppointCallIcon"
+                            android:orientation="vertical" 
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/right_tv_apponitcontent_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_16" />
+
+                            <TextView
+                                android:id="@+id/right_tv_apponitcontent_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/right_tv_apponitcontent_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/sp_14"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:maxWidth="@dimen/p115" />
+                        </LinearLayout>
+                        
+                        <!-- 右边加入通话的内容显示 -->
+                        <TextView 
+                            android:visibility="gone"
+                            android:id="@+id/right_TextJoinCall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rightForward"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="1dp"
+                            android:paddingBottom="@dimen/p10"
+                            android:paddingLeft="@dimen/p25"
+                            android:paddingRight="@dimen/p15"
+                            android:paddingTop="@dimen/p10"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:text="@string/Join_Call"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <com.yunkang.prenatalgt.widget.VMessageRightLyView
+                    android:id="@+id/ly_right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/p20"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.yunkang.prenatalgt.widget.VMessageRightStaticImage
+                        android:id="@+id/right_static_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/p15"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/right_img_receipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginRight="@dimen/p5"
+                        android:layout_toLeftOf="@id/right_static_img"
+                        android:gravity="bottom|right"
+                        android:singleLine="true"
+                        android:textColor="@color/c_fdaa83"
+                        android:textSize="@dimen/sp_12"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <com.yunkang.prenatalgt.widget.VMessageRightFileView
+                    android:id="@+id/rRightFileView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/p40"
+            android:layout_marginRight="@dimen/p10"
+            android:gravity="right" >
+
+            <com.yunkang.prenatalgt.widget.CircleImageView
+                android:id="@+id/right_userIcon"
+                android:layout_width="@dimen/p40"
+                android:layout_height="@dimen/p40"
+                android:contentDescription="@string/no"
+                android:gravity="center|center_vertical"
+                android:src="@mipmap/icon_c"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 中间 显示阅后即阅 -->
+
+    <LinearLayout
+        android:id="@+id/fireLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/p10"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/mFireText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/p35"
+            android:layout_margin="@dimen/p10"
+            android:background="@drawable/ic_withdraw_bg"
+            android:gravity="center|center_vertical"
+            android:text="@string/msg_msg_fireing"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

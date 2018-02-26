@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/c_f0f2f5"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/topRelative"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/p50"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/p8">
+
+
+        <ImageView
+            android:id="@+id/messageBack"
+            android:layout_width="@dimen/p50"
+            android:layout_height="@dimen/p50"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/sl_back_click"/>
+
+        <TextView
+            android:id="@+id/mCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/p8"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/detailtag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:gravity="center|center_horizontal"
+            android:singleLine="true"
+            android:textColor="#F0F0F0"
+            android:textSize="@dimen/sp_20"/>
+
+        <ImageView
+            android:id="@+id/callPhone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@mipmap/freephone_nev_phone"/>
+
+        <ImageView
+            android:id="@+id/eidtMessage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/sl_more_click"
+            />
+    </LinearLayout>
+
+    <!-- 底部菜单 -->
+
+    <com.yunkang.prenatalgt.widget.KeyBoardListenerRelativeLayout
+        android:id="@+id/reMessageguwen"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/p60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dip">
+
+        <!-- 消息发送  @dimen/p60  @drawable/all_tab_bg -->
+
+        <com.yunkang.prenatalgt.widget.InterceptTouchRelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_f0f2f5">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p1"
+                android:layout_alignParentTop="true"
+                android:background="@color/c_e1e5ea"/>
+
+            <!-- 发送 -->
+
+            <TextView
+                android:id="@+id/iv_sending"
+                android:layout_width="@dimen/p55"
+                android:layout_height="@dimen/p60"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/p15"
+                android:background="@drawable/msg_btn_send"
+                android:gravity="center|center_vertical"
+                android:text="@string/send"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/sp_15"
+                android:visibility="invisible"/>
+
+            <!-- 更多 -->
+
+            <RelativeLayout
+                android:id="@+id/rmore"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/p60"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/p11">
+
+                <ImageView
+                    android:id="@+id/more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/bg_more_button"
+                    android:gravity="center|center_vertical"/>
+
+
+            </RelativeLayout>
+
+            <!-- 模式切换  android:background="@drawable/modes_switch_border_right" -->
+
+            <RelativeLayout
+                android:id="@+id/rmodeSwitchtools"
+                android:layout_width="@dimen/p50"
+                android:layout_height="@dimen/p50"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/p2">
+
+                <TextView
+                    android:id="@+id/modeSwitchtools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/sl_message_click"
+                    android:gravity="center"
+                    android:textColor="@color/c_3695f0"
+                    android:textSize="@dimen/sp_18"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/drop_down_sel"/>
+
+                <View
+                    android:layout_width="@dimen/p1"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/c_e1e5ea"/>
+            </RelativeLayout>
+
+            <!-- 录音 -->
+
+            <RelativeLayout
+                android:id="@+id/rly"
+                android:layout_width="@dimen/p50"
+                android:layout_height="@dimen/p50"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/rmodeSwitchtools">
+
+                <ImageView
+                    android:id="@+id/recoding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/sl_say"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/downRecoding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/p35"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/p10"
+                android:layout_marginRight="@dimen/p5"
+                android:layout_toLeftOf="@id/iv_sending"
+                android:layout_toRightOf="@id/rly"
+                android:background="@drawable/recoding_sel"
+                android:text="@string/press_record"
+                android:textColor="@color/c_478aee"
+                android:textSize="@dimen/sp_15"
+                android:visibility="gone"/>
+
+            <com.yunkang.prenatalgt.widget.ChatEditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p40"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/p10"
+                android:layout_marginTop="@dimen/p10"
+                android:layout_toLeftOf="@id/iv_sending"
+                android:layout_toRightOf="@id/rly"
+                android:background="@drawable/msg_inputbox_msg"
+                android:paddingBottom="@dimen/p7"
+                android:paddingLeft="@dimen/p8"
+                android:paddingRight="@dimen/p35"
+                android:paddingTop="@dimen/p5"
+                android:textColor="#000000"
+                android:textColorHint="#b8b8b8"
+                android:textSize="@dimen/sp_16"/>
+            <!-- 表情 -->
+
+            <RelativeLayout
+                android:id="@+id/rbqtools"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/p60"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/p65">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/sl_talk_button_more"/>
+            </RelativeLayout>
+        </com.yunkang.prenatalgt.widget.InterceptTouchRelativeLayout>
+
+        <!-- 表情控件 -->
+
+        <RelativeLayout
+            android:id="@+id/rbq"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_bottom"
+            android:background="#282828"
+            android:visibility="gone">
+
+            <com.yunkang.prenatalgt.widget.VFaceLayout
+                android:id="@+id/face_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p210"
+                android:background="@mipmap/talk_bg_biaoqing"/>
+        </RelativeLayout>
+
+        <!-- 地图，照片，照相 -->
+
+        <com.yunkang.prenatalgt.widget.VMessageToolView
+            android:id="@+id/rtools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_bottom"
+            android:background="#282828"
+            android:visibility="gone"/>
+
+        <!-- 底部菜单 删除  -->
+
+        <RelativeLayout
+            android:id="@+id/mTools"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/p60"
+            android:background="@drawable/msg_bg_list_click"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/deleteLine"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p1"
+                android:layout_alignParentTop="true"
+                android:background="@color/c_e1e5ea"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deleteLine"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTools_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/p17"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/del"
+                    android:textColor="@color/c_fa5544"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/mTools_froward"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/p17"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/forwarding"
+                    android:textColor="@color/c_fa5544"
+                    android:textSize="@dimen/sp_16"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.yunkang.prenatalgt.widget.KeyBoardListenerRelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/reMessageguwen"
+        android:layout_below="@id/topRelative"
+        android:layout_marginBottom="@dimen/p5"
+        android:background="@color/c_f0f2f5">
+
+        <!-- android:stackFromBottom="true" -->
+
+        <com.yunkang.prenatalgt.widget.PullDownListView
+            android:id="@+id/sreach_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000">
+
+            <ListView
+                android:id="@+id/lvMessageDetail"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:background="@color/c_f0f2f5"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:scrollingCache="false"/>
+        </com.yunkang.prenatalgt.widget.PullDownListView>
+        <!-- new_message_prompt -->
+
+
+        <!-- 底部消息未读条数 -->
+
+        <TextView
+            android:id="@+id/new_message"
+            android:layout_width="@dimen/p40"
+            android:layout_height="@dimen/p40"
+            android:layout_above="@id/sreach_list"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dip"
+            android:background="@mipmap/message_prompt_number"
+            android:gravity="center"
+            android:textColor="@color/c_ff7533"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- 消息提示有人@你 -->
+
+    <RelativeLayout
+        android:id="@+id/messageTips"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/p44"
+        android:layout_below="@id/topRelative"
+        android:background="@color/c_fff4d7"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/p15"
+            android:text="@string/onclick_lock"
+            android:textColor="@color/c_525252"
+            android:textSize="@dimen/sp_15"/>
+    </RelativeLayout>
+
+    <!-- 断网提示 -->
+
+    <include
+        layout="@layout/message_not_net"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/p44"
+        android:layout_below="@id/topRelative"
+        android:visibility="gone"/>
+
+    <!-- 未读消息提醒 -->
+
+    <RelativeLayout
+        android:id="@+id/readCount"
+        android:layout_width="@dimen/p140"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/topRelative"
+        android:layout_marginTop="@dimen/p20"
+        android:background="@drawable/read_msg_bg"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/readMsgCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/p5"
+            android:layout_marginRight="@dimen/p15"
+            android:text="15条新消息"
+            android:textColor="@color/c_525252"
+            android:textSize="@dimen/sp_15"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/p5"
+            android:layout_marginTop="@dimen/p5"
+            android:layout_toLeftOf="@id/readMsgCount"
+            android:background="@mipmap/read_msg_up"/>
+    </RelativeLayout>
+
+</RelativeLayout>

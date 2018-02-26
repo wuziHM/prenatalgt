@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rly_left"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/p10"
+        android:background="@drawable/msg_bg_consultmsg">
+
+        <!-- android:background="@drawable/ly_play" -->
+
+        <ImageView
+            android:id="@+id/left_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/p20"
+            android:background="@drawable/anim_recofing_right"/>
+
+        <TextView
+            android:id="@+id/recoding_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/p10"
+            android:layout_toRightOf="@id/left_play"
+            android:text="1"
+            android:textColor="@color/c_3864a7"
+            android:textSize="@dimen/sp_16"/>
+
+        <TextView
+            android:id="@+id/mlyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/p10"
+            android:layout_marginTop="@dimen/p5"
+            android:layout_toRightOf="@id/left_play"
+            android:singleLine="true"
+            android:textColor="@color/c_757575"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/mlySize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mlyName"
+            android:layout_marginLeft="@dimen/p10"
+            android:layout_marginTop="@dimen/p5"
+            android:layout_toRightOf="@id/left_play"
+            android:textColor="@color/c_c3c3c3"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/recodingUnread"
+        android:layout_width="@dimen/p9"
+        android:layout_height="@dimen/p9"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/p5"
+        android:layout_marginRight="@dimen/p10"
+        android:layout_marginTop="@dimen/p1"
+        android:layout_toRightOf="@id/rly_left"
+        android:background="@mipmap/icon_point"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/p17"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/p10"
+        android:layout_marginRight="@dimen/p10"
+        android:layout_toRightOf="@id/rly_left"
+        android:indeterminateDrawable="@drawable/message_progress_send_state"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

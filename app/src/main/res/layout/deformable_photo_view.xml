@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_circle"
+    android:layout_width="@dimen/p44"
+    android:layout_height="@dimen/p44"
+    android:layout_centerVertical="true"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/img_rt_1"
+        android:layout_width="@dimen/p44"
+        android:layout_height="@dimen/p22"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.yunkang.prenatalgt.widget.CircleImageView
+            android:id="@+id/img_head_1"
+            android:layout_width="@dimen/p22"
+            android:layout_height="@dimen/p22"
+            android:src="@mipmap/icon_c" />
+
+        <com.yunkang.prenatalgt.widget.CircleImageView
+            android:id="@+id/img_head_2"
+            android:layout_width="@dimen/p22"
+            android:layout_height="@dimen/p22"
+            android:src="@mipmap/icon_c" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/img_rt_2"
+        android:layout_width="@dimen/p44"
+        android:layout_height="@dimen/p22"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.yunkang.prenatalgt.widget.CircleImageView
+            android:id="@+id/img_head_3"
+            android:layout_width="@dimen/p22"
+            android:layout_height="@dimen/p22"
+            android:src="@mipmap/icon_c" />
+
+        <com.yunkang.prenatalgt.widget.CircleImageView
+            android:id="@+id/img_head_4"
+            android:layout_width="@dimen/p22"
+            android:layout_height="@dimen/p22"
+            android:src="@mipmap/icon_c" />
+    </LinearLayout>
+
+</RelativeLayout>

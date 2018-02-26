@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:minHeight="@dimen/p60"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/p5"
+              android:paddingTop="@dimen/p5">
+
+    <View
+        android:layout_width="@dimen/p5"
+        android:layout_height="@dimen/p20"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/p10"
+        android:layout_marginRight="@dimen/p8"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tv_num"
+        style="@style/txt_14_333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="20114207011"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/txt_14_333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="李慧珍"/>
+
+    <TextView
+        android:id="@+id/tv_sex"
+        style="@style/txt_14_333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="女"/>
+</LinearLayout>

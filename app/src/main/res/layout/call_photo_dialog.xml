@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_call_phone_dialog"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@color/c_7f000000"
+    android:gravity="bottom"  >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_message_detail"
+         android:layout_marginLeft="@dimen/p20"
+         android:layout_marginRight="@dimen/p20" >
+
+        <!-- 发送给朋友 -->
+
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/p45" >
+
+            <TextView
+                android:id="@+id/mCallPhotoTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/c_80000000"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mCallPhotoTip"
+                android:layout_centerHorizontal="true"
+                android:text="@string/call_photo_tips"
+                android:textColor="@color/c_80000000"
+                android:textSize="@dimen/sp_13" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/c_e1e5ea" />
+        </RelativeLayout>
+
+        <!-- 呼叫 -->
+
+        <RelativeLayout
+            android:id="@+id/two"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/p45"
+            android:layout_below="@id/one" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/send_phone"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/sp_15" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/c_e1e5ea" />
+        </RelativeLayout>
+
+        <!-- 发短信 -->
+
+        <RelativeLayout
+            android:id="@+id/three"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/p45"
+            android:layout_below="@id/two" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/send_message"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/sp_15" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/p1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/c_e1e5ea" />
+        </RelativeLayout>
+
+        <!-- 复制 -->
+
+        <RelativeLayout
+            android:id="@+id/four"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/p45"
+            android:layout_below="@id/three" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/copy"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+    </RelativeLayout>
+    
+     <RelativeLayout
+            android:id="@+id/layout_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/p45"
+            android:layout_margin="@dimen/p20"
+            android:layout_below="@id/layout_top_btn"
+            android:background="@drawable/ic_message_detail">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/cancel"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:huanhuan="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageBg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/p5"
+        android:singleLine="true"
+        android:paddingRight="@dimen/p5"
+        android:textColor="@color/c_80000000"
+        android:textSize="@dimen/sp_12"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forward" >
+
+        <RelativeLayout
+            android:id="@+id/leftStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <!-- 回执显示 -->
+
+
+            <!--
+                 <TextView
+                android:layout_width="@dimen/p70"
+                android:layout_height="@dimen/p70"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="@dimen/p5"
+                android:gravity="bottom|right"
+                android:singleLine="true"
+                android:textColor="@color/unread"
+                android:textSize="@dimen/suxiliary_information_font" />
+
+            -->
+           
+
+            <!-- 发送失败图片 -->
+
+            <ImageView
+                android:id="@+id/send_failure"
+                android:layout_width="@dimen/p18"
+                android:layout_height="@dimen/p18"
+                android:background="@drawable/msg_send_failure"
+                android:contentDescription="@string/no"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <!-- 图片里面的 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/leftStatus" 
+            >
+
+            <com.yunkang.prenatalgt.widget.BubbleImageView
+                android:id="@+id/static_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/no" 
+                huanhuan:arrowLocation="right"
+		        huanhuan:arrowPosition="@dimen/p10"
+		        huanhuan:arrowWidth="@dimen/p5"
+		        huanhuan:arrowHeight="@dimen/p4"/>
+
+            <ImageView
+                android:id="@+id/fire_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/static_map"
+                android:contentDescription="@string/no"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgProccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/c_e62b2d"
+                android:contentDescription="@string/no" />
+
+            <RelativeLayout
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/mProgress"
+                    android:layout_width="@dimen/p25"
+                    android:layout_height="@dimen/p25"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateDrawable="@drawable/progress_load" />
+
+                <TextView
+                    android:id="@+id/mProccess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mProgress"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/p5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

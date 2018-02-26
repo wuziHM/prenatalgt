@@ -1,0 +1,53 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/p30"
+    android:orientation="horizontal"
+    tools:ignore="NamespaceTypo">
+
+    <TextView
+        android:id="@+id/tv_category"
+        style="@style/txt_12_333_center"
+        android:layout_width="@dimen/p0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="GJB2"
+        android:textColor="@color/c_333333"
+        />
+
+    <TextView
+        android:id="@+id/tv_category1"
+        style="@style/txt_12_333_center"
+        android:layout_width="@dimen/p0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="35de1G"
+        android:textColor="@color/c_333333"
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        style="@style/txt_12_333_center"
+        android:layout_width="@dimen/p0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="G/t"
+        android:textColor="@color/c_333333"
+        />
+
+    <TextView
+        android:id="@+id/tvLabelCategory"
+        style="@style/txt_12_333_center"
+        android:layout_width="@dimen/p0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="野生型"
+        android:textColor="@color/c_333333"
+        />
+
+</LinearLayout>
